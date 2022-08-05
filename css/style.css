@@ -1,0 +1,246 @@
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 0.7rem;
+}
+
+main {
+    background-color: #F3F5FC;
+    height: calc(100vh - 32.27px);
+}
+
+.contenedor-textos {
+    display: flex;
+    justify-content: center;
+}
+
+#textoIngresado {
+    width: 40%;
+    margin: 10% 0;
+    font-size: 1.3rem;
+    background-color: #F3F5FC;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#textoIngresado::placeholder {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contenedor-botones {
+    width: 80%;
+    text-align: center;
+}
+
+.contenedor-botones div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-botones p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.fa-circle-exclamation {
+    color: crimson;
+}
+
+#encriptar, #desencriptar {
+    border: none;
+    margin: 5px;
+    color: white;
+    background-color: black;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.contenedor-decifrado {
+    min-height: 600px;
+    min-width: 300px;
+    top: 0;
+    left: 0;
+    margin: 50px 0;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.contenedor-botones-encriptacion > button {
+    background-color: #F3F5FC;
+    color: black;
+    font-size: 1rem;
+    margin-left: 15px;
+    transition: 0.5s;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #F3F5FC;
+    font-weight: 600;
+}
+
+.contenedor-botones-encriptacion > button:hover {
+    background-color: crimson;
+    color: white;
+    border: 1px solid black;
+}
+#textoSalida {
+    width: 100%;
+    height: 200px;
+    border: none;
+    margin-top: 80px;
+    padding: 15px;
+    resize: none;
+    position: absolute;
+    bottom: 20px;
+}
+
+#textoSalida::placeholder {
+    text-align: center;
+    padding-top: 25%;
+}
+
+#copiar {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 7px 0;
+    position: absolute;
+    bottom: 5px;
+    width: 95%;
+    border-radius: 6px;
+    border: none;
+    background-color: #44ac01;
+}
+
+footer > div {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    background-color: #F3F5FC;
+    padding: 5px 10px;
+    border-top: 2px solid black;
+}
+
+footer > div a {
+    color: #0a3871;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+/* Underline From Left */
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #0a3871;
+    height: 2px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+}
+
+/* Media query */
+@media (max-width: 820px) {
+    .logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main {
+        height: auto;
+    }
+
+    .contenido-principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #textoIngresado {
+        width: 100%;
+        padding: 0 5%;
+        padding: 15% 3%;
+    }
+    
+    .contenedor-textos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor-decifrado {
+        min-height: 475px;
+        min-width: 250px;
+    }
+
+    .img-msj-no-encontrado {
+        max-width: 420px;
+    }
+
+    .contenedor-decifrado {
+        margin: 0;
+    }
+
+    .contenedor-textos > div{
+        margin: auto;
+    }
+
+    .contenedor-botones {
+        width: auto;
+        margin: 10px 0;
+        background-color: #F3F5FC;
+    }
+
+    footer > div {
+        padding-top: 10px;
+    }
+
+}
+
+/* Javascript */
+
+.msj-encriptado {
+    background-image: url(../images/msj-encriptado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.msj-desencriptado {
+    background-image: url(../images/msj-desencriptado.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

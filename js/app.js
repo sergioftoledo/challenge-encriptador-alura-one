@@ -18,8 +18,6 @@ encriptar.addEventListener('click', function encriptar() {
         textoEncriptado = textoEncriptado.replace(/u/igm, "ufat");
         
         
-        document.querySelector('.msj-original').style.display = 'none';
-        document.querySelector('.indicaciones').style.display = 'none';
         ImagenInicial.style.display = 'none';
         contenedorCifrado.classList.add('msj-encriptado');
         contenedorCifrado.classList.remove('msj-desencriptado');
@@ -49,8 +47,6 @@ desencriptar.addEventListener('click', function desencriptar() {
         ImagenInicial.style.display = 'none';
         contenedorCifrado.classList.remove('msj-encriptado');
         contenedorCifrado.classList.add('msj-desencriptado');
-        document.querySelector('.msj-original').style.display = 'none';
-        document.querySelector('.indicaciones').style.display = 'none';
         document.querySelector('#textoSalida').innerHTML = textoEncriptado;
         
     } else {
